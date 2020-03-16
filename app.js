@@ -5,7 +5,7 @@ const app = express();
 
 const createdParks = require('./controllers/userPark');
 const user = require('./controllers/user-controller');
-//const parks= require('./controllers/skateparkcontroller');
+const allPark=require('./controllers/allParks');
 // DATABASE IMPORT & SYNC
 const sequelize = require('./db');
 sequelize.sync();
@@ -14,7 +14,8 @@ app.use(express.json());
 app.use(require ('./middleware/headers'));
 
 
-//app.use('/park', parks)
+app.use('/all', allPark);
+
 
 app.use('/sign',user);
 
