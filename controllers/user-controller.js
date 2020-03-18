@@ -1,3 +1,4 @@
+
 const router = require('express').Router();
 const User = require('../db').import('../models/users');
 const bcrypt =require('bcryptjs');
@@ -13,9 +14,10 @@ router.post('/signup', (req,res) =>{
     })
     .then(
         createSuccess = (user) =>{
+             
             let token =jwt.sign({
                 id: user.id
-            }, proccess.env.JWT_SECRET, {
+            }, process.env.JWT_SECRET, {
                 expiresIn: 60* 60*24
             })
             res.json({
