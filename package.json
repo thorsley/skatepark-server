@@ -16,7 +16,7 @@
     "dotenv": "^5.0.1",
     "email-validator": "^2.0.4",
     "express": "^4.16.3",
-    "fast-csv": "^4.1.1",
+    "fast-csv": "^4.3.6",
     "jsonwebtoken": "^8.2.0",
     "multer": "^1.4.2",
     "pg": "^7.4.1",
